@@ -35,4 +35,7 @@ publish:
     access_key: $$AWS_KEY
     secret_key: $$AWS_SECRET
     source: packaging/output/
-    target: $DRONE_BRAN
+    target: $DRONE_BRANCH/
+    recursive: true
+    when:
+      owner: drone
